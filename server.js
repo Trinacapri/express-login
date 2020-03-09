@@ -11,7 +11,7 @@ app.use(morgan('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 const port = 7000
-const mongoUrl = "mongodb+srv://Trina:trina@soumakdb-g9zuk.mongodb.net/authdb?retryWrites=true&w=majority"
+const mongoUrl = ""
  
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true } )
     .then(() => console.log("> MongoDB Connected!"))

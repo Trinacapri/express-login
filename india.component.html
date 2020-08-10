@@ -1,0 +1,24 @@
+<table align="center" border="1" cellpadding="4" cellspacing="4">
+  <tr>
+    <th>ID</th>
+    <th>State name</th>
+    <th>Confirmed</th>
+    <th>Recovered</th>
+    <th>Decreased</th>
+    <th>Tested</th>
+    <!-- <th>Districts</th> -->
+  </tr>
+
+  <tr *ngFor="let corona of coronaList | keyvalue; let index = index">
+    <td>{{ index + 1 }}</td>
+    <td>{{ corona.key }}</td>
+
+    <td>
+      {{ corona.value.total?.confirmed }}
+    </td>
+    <td>{{ corona.value.total?.recovered }}</td>
+    <td>{{ corona.value.total?.deceased }}</td>
+    <td>{{ corona.value.total?.tested }}</td>
+    <!-- <button class="btn" (click)="getdistrictdata()">details</button> -->
+  </tr>
+</table>
